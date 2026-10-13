@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-13T14:53:00.161011+00:00",
+  "site": "https://sns-auto-flow.vercel.app/",
+  "verified_app_version": "1.0.1",
+  "actualSnsPublish": false,
+  "accounts": {
+    "Alex": {
+      "login": "passed",
+      "own_video_upload": "passed",
+      "own_approval_reservation": "passed",
+      "customer_list_view": "passed",
+      "customer_video_replacement": "passed",
+      "customer_content_channel_time_edit": "passed",
+      "customer_approval_reservation": "passed",
+      "customer_ownership_and_actor_history": "passed",
+      "reload_persistence": "passed",
+      "own_reservation_kst": "2026-10-23 10:30",
+      "customer_reservation_kst": "2026-10-23 14:30",
+      "screenshots": [
+        "alex-own-approved-e2e.png",
+        "alex-customer-approved-e2e.png",
+        "alex-schedule-reloaded-e2e.png"
+      ]
+    },
+    "david": {
+      "login": "passed",
+      "full_browser_workflow": "pending",
+      "reason": "Browser automation clicks do not reliably reach content controls; requested a single human click to enter the video registration view. API/SDK functionality is verified separately.",
+      "screenshots": []
+    }
+  },
+  "backend_report": "staff-integration-qa.json",
+  "application_source_changes": false,
+  "tested_application_commit": "bef8b5cc8cf2d1effabb7d3a8657a89ad87f4476"
+}

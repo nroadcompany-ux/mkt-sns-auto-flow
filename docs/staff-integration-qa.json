@@ -1,0 +1,76 @@
+{
+  "at": "2026-10-13T14:48:59.534Z",
+  "method": "Production Supabase JWT + production TUS upload SDK + validated RPCs; this is separate from browser UI verification",
+  "passed": 44,
+  "checks": [
+    "Alex authenticates with highest operator role",
+    "Alex uploads private video via the production TUS SDK",
+    "Alex saves own video and KST reservation",
+    "Alex requests approval on own post",
+    "Alex rejects stale approval",
+    "Alex explicitly approves own reservation",
+    "Alex reads persisted approved own post",
+    "Alex reads own private uploaded video",
+    "Alex records own actor on save and approval",
+    "Alex cancels own QA reservation with history retained",
+    "Alex reads customer draft",
+    "Alex uploads replacement to the customer folder",
+    "Alex edits customer video/content/time while retaining customer owner",
+    "Alex replacement remains accessible by the customer",
+    "Alex replacement remains private from other customers",
+    "Alex requests approval of edited customer post",
+    "Alex withdraws approval to allow revision",
+    "Alex approves customer reservation",
+    "Alex customer sees actual operator audit history",
+    "Alex foreign customer cannot see managed history",
+    "Alex cancels managed QA reservation without deleting history",
+    "Alex real SNS publish remains disabled",
+    "david authenticates with highest operator role",
+    "david uploads private video via the production TUS SDK",
+    "david saves own video and KST reservation",
+    "david requests approval on own post",
+    "david rejects stale approval",
+    "david explicitly approves own reservation",
+    "david reads persisted approved own post",
+    "david reads own private uploaded video",
+    "david records own actor on save and approval",
+    "david cancels own QA reservation with history retained",
+    "david reads customer draft",
+    "david uploads replacement to the customer folder",
+    "david edits customer video/content/time while retaining customer owner",
+    "david replacement remains accessible by the customer",
+    "david replacement remains private from other customers",
+    "david requests approval of edited customer post",
+    "david withdraws approval to allow revision",
+    "david approves customer reservation",
+    "david customer sees actual operator audit history",
+    "david foreign customer cannot see managed history",
+    "david cancels managed QA reservation without deleting history",
+    "david real SNS publish remains disabled"
+  ],
+  "records": [
+    {
+      "kind": "own",
+      "operator": "Alex",
+      "status": "cancelled"
+    },
+    {
+      "kind": "customer",
+      "operator": "Alex",
+      "status": "cancelled"
+    },
+    {
+      "kind": "own",
+      "operator": "david",
+      "status": "cancelled"
+    },
+    {
+      "kind": "customer",
+      "operator": "david",
+      "status": "cancelled"
+    }
+  ],
+  "actualSnsPublish": false,
+  "qaReservationsCancelled": true,
+  "tested_application_commit": "bef8b5cc8cf2d1effabb7d3a8657a89ad87f4476"
+}
