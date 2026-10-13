@@ -36,3 +36,13 @@ export function validateVideo(file:Pick<File,'size'|'type'>) {
   if (file.size===0 || file.size>MAX_VIDEO_BYTES) return '영상은 0바이트보다 크고 100MB 이하여야 해요.'
   return null
 }
+
+// Only reserved operator IDs use the internal username identity; customer emails are unchanged.
+export function loginEmail(identifier:string) {
+  const value=identifier.trim()
+  const id=value.toLowerCase()
+  return ['alex','david'].includes(id) ? `${id}@staff.marketingplay.internal` : value
+}
+export function isOwner(user:{app_metadata:Record<string,unknown>}|null|undefined) {
+  return user?.app_metadata.mp_role==='operator' && user.app_metadata.mp_access==='owner'
+}

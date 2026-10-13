@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-13T12:11:42.159Z",
+  "passed": 22,
+  "checks": [
+    "Alex has server-managed highest operator role",
+    "Alex is recognized by database owner predicate",
+    "david has server-managed highest operator role",
+    "david is recognized by database owner predicate",
+    "Ordinary customer is not an owner",
+    "QA customer fixture exists",
+    "Alex reads customer contents",
+    "Alex can preview customer video",
+    "david reads customer contents",
+    "david can preview customer video",
+    "Ordinary customer remains isolated",
+    "Anonymous cannot read content",
+    "Customer creates controlled QA draft",
+    "Alex edits customer draft without transferring ownership",
+    "Foreign customer cannot operate on draft",
+    "Highest operator still uses validated workflow",
+    "Alex submits customer draft",
+    "David approves customer reservation",
+    "Customer retains history with actual operator actors",
+    "QA reservation cancelled with history retained",
+    "QA metadata forgery submitted for negative test",
+    "User metadata cannot grant highest permissions"
+  ],
+  "actualSnsPublish": false,
+  "customerIsolation": true
+}
