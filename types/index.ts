@@ -36,6 +36,7 @@ export interface IBrand {
 
 export interface IScheduleItem {
   id: string
+  dbId?: string
   index: number
   topic: string
   angle: string

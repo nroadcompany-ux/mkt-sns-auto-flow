@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-13T10:16:12.436Z",
+  "project": "sns-auto-flow",
+  "checks": [
+    "Customer A signs in",
+    "Customer B signs in",
+    "Private video uploads with customer token",
+    "Draft persists in Supabase",
+    "Customer B cannot read customer A post",
+    "Anonymous data reads are denied",
+    "Foreign profile update cannot change data",
+    "Customer B cannot obtain A video URL",
+    "Foreign-folder upload is denied",
+    "Direct status forgery is denied",
+    "Approval request without reservation is rejected",
+    "Reservation persists as a UTC instant",
+    "Foreign draft overwrite is denied",
+    "Stale concurrent approval is rejected",
+    "Explicit approval records reservation and approval time",
+    "Approved content cannot be silently edited",
+    "Event history is append-only and tenant-isolated",
+    "Cancel preserves the QA record"
+  ],
+  "passed": 18,
+  "actualSnsPublish": false
+}

@@ -1,4 +1,5 @@
 "use client"
+import { operatorFetch } from "@/lib/customer"
 import { useState, useEffect, useRef, useCallback } from "react"
 
 // ── 타입 ─────────────────────────────────────────
@@ -60,7 +61,7 @@ export default function VideoMaker({ brandName, brandColor }: { brandName: strin
   const loadBank = useCallback(async () => {
     setBankLoading(true)
     try {
-      const res = await fetch("/api/image-bank")
+      const res = await operatorFetch("/api/image-bank")
       const data = await res.json()
       if (data.success) setBankImages(data.images || [])
     } catch {}
@@ -73,7 +74,7 @@ export default function VideoMaker({ brandName, brandColor }: { brandName: strin
   const handleGenerateImages = async () => {
     setGenLoading(true); setGenError(null); setGenImages([])
     try {
-      const res = await fetch("/api/video/image", {
+      const res = await operatorFetch("/api/video/image", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ topic, gender, situation: situation === "custom" ? "custom" : situation, count: 4 }),
@@ -103,7 +104,7 @@ export default function VideoMaker({ brandName, brandColor }: { brandName: strin
   const deleteFromBank = async (id: string) => {
     if (!window.confirm("이미지를 삭제할까요?")) return
     try {
-      await fetch("/api/image-bank", { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id }) })
+      await operatorFetch("/api/image-bank", { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id }) })
       setBankImages(p => p.filter(img => img.id !== id))
     } catch {}
   }
@@ -115,7 +116,7 @@ export default function VideoMaker({ brandName, brandColor }: { brandName: strin
       const dataUrl = e.target?.result as string
       if (!dataUrl) return
       try {
-        const res = await fetch("/api/image-bank", {
+        const res = await operatorFetch("/api/image-bank", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ url: dataUrl, label: file.name.replace(/\.[^.]+$/, ""), gender, situation, source: "midjourney" }),
@@ -136,7 +137,7 @@ export default function VideoMaker({ brandName, brandColor }: { brandName: strin
 
     const imageUrl = selectedImages[0] || ""
     try {
-      const res = await fetch("/api/video/render", {
+      const res = await operatorFetch("/api/video/render", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -173,7 +174,7 @@ export default function VideoMaker({ brandName, brandColor }: { brandName: strin
     if (pollRef.current) clearInterval(pollRef.current)
     pollRef.current = setInterval(async () => {
       try {
-        const res = await fetch(`/api/video/render/status?renderId=${rid}&bucketName=${bucket}`)
+        const res = await operatorFetch(`/api/video/render/status?renderId=${rid}&bucketName=${bucket}`)
         const data = await res.json()
         if (!data.success) return
         setRenderPercent(data.percent || 0)

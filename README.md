@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 마케팅플레이 오토 · 고객용 V1
+
+기존 `mkt-sns-auto-flow` 기반 고객 웹 서비스입니다. 이메일 로그인·회원가입, 비공개 영상 업로드,
+초안·게시 채널·한국 시간 예약 저장, 승인 요청·최종 승인·취소와 작업 이력을 제공합니다.
+**SNS 게시 연결은 준비 중이며, 실제 자동 게시를 실행하지 않습니다.**
+
+- 고객용: https://sns-auto-flow.vercel.app/
+- 기존 운영자 제작 도구: `/studio` (검증된 `app_metadata.mp_role=operator` 계정만)
+- 운영 DB: 기존 `sns-auto-flow` Supabase 프로젝트의 `mp_v1_*` 테이블
+- 상세 범위·설정·권한: [고객 V1 문서](docs/customer-v1.md)
+- API/Storage 운영 검증: [검증 기록](docs/live-qa.json)
+
+아래는 기존 Next.js 개발 시작 안내입니다. 과거 `HANDOFF.md`의 미배포/DB 설명은 과거 작업 시점의 기록입니다.
 
 ## Getting Started
 

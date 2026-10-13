@@ -4,7 +4,7 @@ import {
   useCurrentFrame, useVideoConfig,
 } from "remotion"
 
-export interface PayplayShortformProps {
+export type PayplayShortformProps = {
   topic:        string
   imageUrl:     string
   brandName:    string
