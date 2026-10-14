@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-14T05:25:16.708971+00:00",
+  "tested_application_commit": "53b0d728182dc187af4338d237df6097087af031",
+  "version": "1.0.1",
+  "passed": 8,
+  "checks": [
+    "Alex current production authentication and highest role verified",
+    "david current production authentication and highest role verified",
+    "david new video is privately owned, approved, and scheduled for 2026-10-24 10:30 KST",
+    "Customer video replaced; customer ownership preserved; content/channels/time match 2026-10-24 15:00 KST",
+    "Own/customer immutable histories attribute every operator action to david",
+    "Both uploaded original files match the local QA video byte-for-byte",
+    "A different customer cannot read the managed content, history, or private video",
+    "Actual SNS publishing stays disabled"
+  ],
+  "actualSnsPublish": false
+}
